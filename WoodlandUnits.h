@@ -2,39 +2,29 @@
 
 #ifndef PRAC_3_WOODLANDUNITS_H
 #define PRAC_3_WOODLANDUNITS_H
+#include "LegionFactory.h"
+#include "WoodlandUnits.h"
 
-#include "LegionUnit.h"
-
-class WoodlandInfantry : public LegionUnit {
+class WoodlandFactory : public LegionFactory {
 public:
-    void move() override {
-        // Implementation specific to Woodland Infantry
+    LegionUnit* createInfantry() override {
+        return new WoodlandInfantry();
     }
 
-    void attack() override {
-        // Implementation specific to Woodland Infantry
-    }
-};
-
-class WoodlandCavalry : public LegionUnit {
-public:
-    void move() override {
-        // Implementation specific to Woodland Cavalry
+    LegionUnit* createCavalry() override {
+        return new WoodlandCavalry();
     }
 
-    void attack() override {
-        // Implementation specific to Woodland Cavalry
-    }
-};
-
-class WoodlandArtillery : public LegionUnit {
-public:
-    void move() override {
-        // Implementation specific to Woodland Artillery
+    LegionUnit* createArtillery() override {
+        return new WoodlandArtillery();
     }
 
-    void attack() override {
-        // Implementation specific to Woodland Artillery
+    void deployArtillery() {
+        // Specific implementation for deploying artillery in woodland terrain
+    }
+
+    ~WoodlandFactory() override {
+        // Clean-up code if needed (e.g., delete dynamically allocated memory)
     }
 };
 

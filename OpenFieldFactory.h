@@ -18,6 +18,14 @@ public:
     LegionUnit* createArtillery() override {
         return new OpenFieldArtillery();
     }
+
+    void deployArtillery() {
+        // Specific implementation for deploying artillery in open field terrain
+    }
+
+    ~OpenFieldFactory() override {
+        // Clean-up code if needed (e.g., delete dynamically allocated memory)
+    }
 };
 
 #endif

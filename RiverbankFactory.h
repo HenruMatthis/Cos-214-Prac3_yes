@@ -3,6 +3,7 @@
 #ifndef PRAC_3_RIVERBANKFACTORY_H
 #define PRAC_3_RIVERBANKFACTORY_H
 
+
 #include "LegionFactory.h"
 #include "RiverbankUnits.h"
 
@@ -18,6 +19,14 @@ public:
 
     LegionUnit* createArtillery() override {
         return new RiverbankArtillery();
+    }
+
+    void deployArtillery() {
+        // Specific implementation for deploying artillery in riverbank terrain
+    }
+
+    ~RiverbankFactory() override {
+        // Clean-up code if needed (e.g., delete dynamically allocated memory)
     }
 };
 

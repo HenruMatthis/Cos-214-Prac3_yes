@@ -14,6 +14,7 @@ public:
     void fight() override {
         // Artillery-specific fight implementation
     }
+
 };
 
 #endif
