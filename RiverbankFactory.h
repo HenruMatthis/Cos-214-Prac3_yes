@@ -9,17 +9,10 @@
 
 class RiverbankFactory : public LegionFactory {
 public:
-    LegionUnit* createInfantry() override {
-        return new RiverbankInfantry();
-    }
+    Infantry* createInfantry() override ;
+    Cavalry* createCavalry() override ;
 
-    LegionUnit* createCavalry() override {
-        return new RiverbankCavalry();
-    }
-
-    LegionUnit* createArtillery() override {
-        return new RiverbankArtillery();
-    }
+    Artillery* createArtillery() override ;
 
     void deployArtillery() {
         // Specific implementation for deploying artillery in riverbank terrain

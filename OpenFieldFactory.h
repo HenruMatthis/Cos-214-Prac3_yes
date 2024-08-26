@@ -7,17 +7,11 @@
 
 class OpenFieldFactory : public LegionFactory {
 public:
-    LegionUnit* createInfantry() override {
-        return new OpenFieldInfantry();
-    }
+    Infantry* createInfantry() override ;
 
-    LegionUnit* createCavalry() override {
-        return new OpenFieldCavalry();
-    }
+    Cavalry* createCavalry() override ;
 
-    LegionUnit* createArtillery() override {
-        return new OpenFieldArtillery();
-    }
+    Artillery* createArtillery() override ;
 
     void deployArtillery() {
         // Specific implementation for deploying artillery in open field terrain

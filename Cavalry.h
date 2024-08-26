@@ -2,17 +2,17 @@
 #ifndef PRAC_3_CAVALRY_H
 #define PRAC_3_CAVALRY_H
 
-#include "UnitComponent.h"
 
-class Cavalry : public UnitComponent {
+#include "LegionUnit.h"
+
+class Cavalry : public LegionUnit {
 public:
-    void move() override {
-        // Cavalry-specific move implementation
-    }
-
-    void fight() override {
-        // Cavalry-specific fight implementation
-    }
+Cavalry();
+    virtual void move() override ;
+    virtual void attack() override ;
+    virtual void add(Cavalry* cavalry) ;
+    virtual void remove(Cavalry* cavalry) ;
+    ~Cavalry();
 };
 
 #endif
